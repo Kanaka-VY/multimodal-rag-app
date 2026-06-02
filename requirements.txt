@@ -1,0 +1,63 @@
+# API & server
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+python-multipart>=0.0.6
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# Frontend
+streamlit>=1.29.0
+requests>=2.31.0
+plotly>=5.18.0
+
+# Vector DB & embeddings
+chromadb>=0.4.22
+sentence-transformers>=2.3.0
+torch>=2.1.0
+
+# Document & multimodal processing
+pypdf>=4.0.0
+Pillow>=10.2.0
+openai-whisper>=20231117
+pydub>=0.25.1
+
+# LLM (optional cloud)
+openai>=1.10.0
+
+# Config & utilities
+pyyaml>=6.0.1
+python-dotenv>=1.0.0
+httpx>=0.26.0
+prometheus-client>=0.19.0
+
+# Pipelines & dev
+dvc>=3.37.0
+pytest>=7.4.0
+pytest-asyncio>=0.23.0
+pytest-cov>=4.1.0
+
+# Advanced document parsing
+unstructured[local-inference]>=0.12.0
+unstructured-client>=0.20.0
+pillow-heif>=0.13.0
+
+# Hybrid search & re-ranking
+rank-bm25>=0.2.2
+cohere>=5.5.0
+
+# Vision-language models
+litellm>=1.40.0
+
+# Observability
+ragas>=0.1.0
+arize-phoenix>=4.0.0
+
+# WebSocket streaming
+websockets>=12.0
+
+# Optimization
+optuna>=3.0.0
+
+# Privacy & PII
+presidio-analyzer>=2.0.0
+presidio-anonymizer>=2.0.0

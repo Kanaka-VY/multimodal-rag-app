@@ -1,0 +1,15 @@
+This is a sample text document for testing the multimodal RAG application.
+
+The application supports multiple modalities:
+- PDF documents
+- Text files
+- Images (PNG, JPG, JPEG, WEBP)
+- Audio files (WAV, MP3, M4A)
+
+Each modality is processed differently:
+- PDFs are chunked by page
+- Text files are chunked by character count
+- Images use CLIP embeddings with caption stubs
+- Audio is transcribed using Whisper before embedding
+
+The vector store uses ChromaDB with cosine similarity for retrieval.

@@ -1,0 +1,29 @@
+stages:
+  extract_multimodal_assets:
+    cmd: python pipelines/data_collection.py --ingest-all --data-dir data
+    deps:
+      - pipelines/data_collection.py
+      - data
+    params:
+      - model_config.yaml:
+          - parsing.use_unstructured
+          - chunking.text_chunk_size
+          - chunking.text_chunk_overlap
+    outs:
+      - chroma_data:
+          cache: false
+    metrics:
+      - metrics/ingestion.json:
+          cache: false
+
+  generate_clip_embeddings:
+    cmd: python -c "from src.core.embeddings import _text_model, _clip_model; print('Models loaded successfully')"
+    deps:
+      - src/core/embeddings.py
+    params:
+      - model_config.yaml:
+          - embedding.text_model
+          - embedding.clip_model
+    metrics:
+      - metrics/embeddings.json:
+          cache: false

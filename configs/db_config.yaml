@@ -1,0 +1,12 @@
+chroma:
+  persist_directory: ./chroma_data
+  collection_name: multimodal_rag
+  host: localhost
+  port: 8001
+
+metadata_fields:
+  - source
+  - modality
+  - filename
+  - page
+  - created_at

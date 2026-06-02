@@ -1,0 +1,143 @@
+{
+  "dataset": "Enterprise RAG Golden Dataset",
+  "version": "1.0",
+  "total_queries": 20,
+  "successful_evaluations": 0,
+  "metrics": {
+    "faithfulness": 0.0,
+    "context_precision": 0.0,
+    "answer_relevance": 0.0,
+    "context_recall": 0.0,
+    "mrr": 0.0
+  },
+  "thresholds": {
+    "faithfulness": 0.8,
+    "context_precision": 0.75,
+    "answer_relevance": 0.7,
+    "context_recall": 0.7,
+    "mrr": 0.75
+  },
+  "all_passed": false,
+  "detailed_results": [
+    {
+      "id": "q001",
+      "question": "What is the main purpose of the enterprise knowledge base?",
+      "error": "Could not import module 'PreTrainedModel'. Are this object's requirements defined correctly?",
+      "success": false
+    },
+    {
+      "id": "q002",
+      "question": "How does the hybrid search system work?",
+      "error": "Could not import module 'PreTrainedModel'. Are this object's requirements defined correctly?",
+      "success": false
+    },
+    {
+      "id": "q003",
+      "question": "What are the security features of the system?",
+      "error": "Could not import module 'PreTrainedModel'. Are this object's requirements defined correctly?",
+      "success": false
+    },
+    {
+      "id": "q004",
+      "question": "Explain the chunk size optimization process.",
+      "error": "Could not import module 'PreTrainedModel'. Are this object's requirements defined correctly?",
+      "success": false
+    },
+    {
+      "id": "q005",
+      "question": "What happens when faithfulness scores are low?",
+      "error": "Could not import module 'PreTrainedModel'. Are this object's requirements defined correctly?",
+      "success": false
+    },
+    {
+      "id": "q006",
+      "question": "How does PII masking work?",
+      "error": "Could not import module 'PreTrainedModel'. Are this object's requirements defined correctly?",
+      "success": false
+    },
+    {
+      "id": "q007",
+      "question": "What vector database options are supported?",
+      "error": "Could not import module 'PreTrainedModel'. Are this object's requirements defined correctly?",
+      "success": false
+    },
+    {
+      "id": "q008",
+      "question": "Describe the ingestion pipeline workflow.",
+      "error": "Could not import module 'PreTrainedModel'. Are this object's requirements defined correctly?",
+      "success": false
+    },
+    {
+      "id": "q009",
+      "question": "What evaluation metrics are tracked?",
+      "error": "Could not import module 'PreTrainedModel'. Are this object's requirements defined correctly?",
+      "success": false
+    },
+    {
+      "id": "q010",
+      "question": "How does the CI/CD pipeline work?",
+      "error": "Could not import module 'PreTrainedModel'. Are this object's requirements defined correctly?",
+      "success": false
+    },
+    {
+      "id": "q011",
+      "question": "What is the purpose of the trace inspector?",
+      "error": "Could not import module 'PreTrainedModel'. Are this object's requirements defined correctly?",
+      "success": false
+    },
+    {
+      "id": "q012",
+      "question": "Explain the cross-modal validation matrix.",
+      "error": "Could not import module 'PreTrainedModel'. Are this object's requirements defined correctly?",
+      "success": false
+    },
+    {
+      "id": "q013",
+      "question": "What are the recommended chunk size settings?",
+      "error": "Could not import module 'PreTrainedModel'. Are this object's requirements defined correctly?",
+      "success": false
+    },
+    {
+      "id": "q014",
+      "question": "How does voice input work?",
+      "error": "Could not import module 'PreTrainedModel'. Are this object's requirements defined correctly?",
+      "success": false
+    },
+    {
+      "id": "q015",
+      "question": "What file types are supported for ingestion?",
+      "error": "Could not import module 'PreTrainedModel'. Are this object's requirements defined correctly?",
+      "success": false
+    },
+    {
+      "id": "q016",
+      "question": "Describe the re-ranking process.",
+      "error": "Could not import module 'PreTrainedModel'. Are this object's requirements defined correctly?",
+      "success": false
+    },
+    {
+      "id": "q017",
+      "question": "What is the role of Arize Phoenix?",
+      "error": "Could not import module 'PreTrainedModel'. Are this object's requirements defined correctly?",
+      "success": false
+    },
+    {
+      "id": "q018",
+      "question": "How does the system handle multimodal queries?",
+      "error": "Could not import module 'PreTrainedModel'. Are this object's requirements defined correctly?",
+      "success": false
+    },
+    {
+      "id": "q019",
+      "question": "What are the deployment options?",
+      "error": "Could not import module 'PreTrainedModel'. Are this object's requirements defined correctly?",
+      "success": false
+    },
+    {
+      "id": "q020",
+      "question": "Explain the context inspector feature.",
+      "error": "Could not import module 'PreTrainedModel'. Are this object's requirements defined correctly?",
+      "success": false
+    }
+  ]
+}

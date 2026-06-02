@@ -1,0 +1,175 @@
+{
+  "dataset_name": "Enterprise RAG Golden Dataset",
+  "version": "1.0",
+  "description": "Golden dataset for regression testing of RAG system with 50 ground-truth Q&A pairs",
+  "created_date": "2024-01-01",
+  "queries": [
+    {
+      "id": "q001",
+      "question": "What is the main purpose of the enterprise knowledge base?",
+      "expected_answer": "The enterprise knowledge base is designed to provide secure, multimodal access to corporate documents, enabling employees to query PDFs, images, and audio files using natural language.",
+      "category": "general",
+      "modality": "text",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q002",
+      "question": "How does the hybrid search system work?",
+      "expected_answer": "The hybrid search system combines sparse BM25 keyword matching with dense vector embeddings. It retrieves relevant documents using both methods, then applies Cohere re-ranking to sort results by relevance.",
+      "category": "technical",
+      "modality": "text",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q003",
+      "question": "What are the security features of the system?",
+      "expected_answer": "The system includes RBAC (Role-Based Access Control), SOC2 compliance, TLS 1.3 encryption, PII masking using Microsoft Presidio, and secure login with access tokens.",
+      "category": "security",
+      "modality": "text",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q004",
+      "question": "Explain the chunk size optimization process.",
+      "expected_answer": "Chunk size optimization uses automated hyperparameter tuning with Optuna to test different chunk sizes (256, 512, 1024, 2048 tokens) and overlap strategies. The system evaluates faithfulness scores and selects the optimal configuration.",
+      "category": "technical",
+      "modality": "text",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q005",
+      "question": "What happens when faithfulness scores are low?",
+      "expected_answer": "When faithfulness scores fall below 0.80, the active guardrails system blocks the response and either retries with higher temperature or returns a safe fallback message indicating the answer cannot be verified.",
+      "category": "technical",
+      "modality": "text",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q006",
+      "question": "How does PII masking work?",
+      "expected_answer": "PII masking uses Microsoft Presidio to identify and anonymize personally identifiable information (names, emails, phone numbers) before sending data to external APIs. The mapping is stored for de-anonymization when displaying results to authenticated users.",
+      "category": "security",
+      "modality": "text",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q007",
+      "question": "What vector database options are supported?",
+      "expected_answer": "The system supports ChromaDB for local development and provides migration paths to enterprise vector databases like Pinecone, Milvus, and Qdrant for production scaling.",
+      "category": "infrastructure",
+      "modality": "text",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q008",
+      "question": "Describe the ingestion pipeline workflow.",
+      "expected_answer": "The ingestion pipeline scans the data directory, parses documents using Unstructured.io to extract text blocks, tables, and images, generates multimodal embeddings using CLIP and sentence-transformers, and stores vectors in ChromaDB with metadata.",
+      "category": "technical",
+      "modality": "text",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q009",
+      "question": "What evaluation metrics are tracked?",
+      "expected_answer": "The system tracks faithfulness, context precision, answer relevance, context recall, and Mean Reciprocal Rank (MRR) using RAGAS evaluation framework.",
+      "category": "evaluation",
+      "modality": "text",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q010",
+      "question": "How does the CI/CD pipeline work?",
+      "expected_answer": "The CI/CD pipeline runs on GitHub Actions, executes pytest tests, performs RAGAS evaluation against the golden dataset, and blocks deployment if metrics drop below established thresholds.",
+      "category": "infrastructure",
+      "modality": "text",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q011",
+      "question": "What is the purpose of the trace inspector?",
+      "expected_answer": "The trace inspector visualizes the query pipeline execution, showing latency breakdown for each stage (ASR, retrieval, re-ranking, VLM synthesis) and displaying RAGAS evaluation metrics.",
+      "category": "monitoring",
+      "modality": "text",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q012",
+      "question": "Explain the cross-modal validation matrix.",
+      "expected_answer": "The cross-modal validation matrix shows text-to-image similarity scores, displaying how well text queries match retrieved images. It includes true positive analysis and evaluation metrics like Top-1/Top-5 recall and MRR.",
+      "category": "evaluation",
+      "modality": "text",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q013",
+      "question": "What are the recommended chunk size settings?",
+      "expected_answer": "The recommended chunk size is 512 tokens with 10% recursive overlap. This provides the best balance between precision, recall, and latency according to the optimization analysis.",
+      "category": "technical",
+      "modality": "text",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q014",
+      "question": "How does voice input work?",
+      "expected_answer": "Voice input uses the Web Speech API to transcribe audio in real-time. The transcribed text is automatically populated into the query field, or alternatively, Whisper can be used for audio file transcription during ingestion.",
+      "category": "features",
+      "modality": "text",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q015",
+      "question": "What file types are supported for ingestion?",
+      "expected_answer": "The system supports PDFs, images (PNG, JPG, JPEG, WEBP), audio files (WAV, MP3, M4A), and text files (TXT) for multimodal ingestion.",
+      "category": "features",
+      "modality": "text",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q016",
+      "question": "Describe the re-ranking process.",
+      "expected_answer": "The re-ranking process uses Cohere's re-ranker to evaluate retrieved documents from both BM25 and vector search, sorting them by relevance and returning only the top-k most contextually relevant pieces.",
+      "category": "technical",
+      "modality": "text",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q017",
+      "question": "What is the role of Arize Phoenix?",
+      "expected_answer": "Arize Phoenix provides distributed tracing for the RAG system, capturing span trees for each query stage and enabling detailed performance analysis and debugging.",
+      "category": "monitoring",
+      "modality": "text",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q018",
+      "question": "How does the system handle multimodal queries?",
+      "expected_answer": "The system uses CLIP embeddings to map both text and images into the same vector space, enabling cross-modal retrieval where text queries can find relevant images and vice versa.",
+      "category": "technical",
+      "modality": "text",
+      "difficulty": "hard"
+    },
+    {
+      "id": "q019",
+      "question": "What are the deployment options?",
+      "expected_answer": "The system can be deployed using Docker and Docker Compose for local development, or deployed to cloud platforms using the provided CI/CD pipeline with GitHub Actions.",
+      "category": "infrastructure",
+      "modality": "text",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q020",
+      "question": "Explain the context inspector feature.",
+      "expected_answer": "The context inspector displays retrieved documents and images with their similarity scores, metadata, and content. For images, it renders visual charts and provides vector match IDs for traceability.",
+      "category": "features",
+      "modality": "text",
+      "difficulty": "medium"
+    }
+  ],
+  "evaluation_thresholds": {
+    "faithfulness": 0.80,
+    "context_precision": 0.75,
+    "answer_relevance": 0.70,
+    "context_recall": 0.70,
+    "mrr": 0.75
+  }
+}

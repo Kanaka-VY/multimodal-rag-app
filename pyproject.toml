@@ -1,0 +1,9 @@
+[project]
+name = "multimodal-rag-app"
+version = "1.0.0"
+description = "Multimodal RAG with FastAPI, ChromaDB, and Streamlit"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

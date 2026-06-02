@@ -1,0 +1,47 @@
+chunking:
+  text_chunk_overlap: 64
+  text_chunk_size: 512
+embedding:
+  clip_model: sentence-transformers/clip-ViT-B-32
+  dimension: 384
+  text_model: sentence-transformers/all-MiniLM-L6-v2
+llm:
+  max_tokens: 1024
+  openai_model: gpt-4o-mini
+  provider: local
+  temperature: 0.2
+  vision_model: gpt-4o
+observability:
+  enable_fallback: true
+  faithfulness_threshold: 0.8
+  fallback_message: I'm sorry, I cannot verify the answer based on the source documents.
+    Please rephrase your question or try a different query.
+  max_retries: 2
+  phoenix_endpoint: http://localhost:6006
+  phoenix_project: omnirag-multimodal
+  use_phoenix: true
+  use_ragas: true
+parsing:
+  use_unstructured: true
+privacy:
+  enable_pii_masking: true
+  mask_entities:
+  - PERSON
+  - EMAIL_ADDRESS
+  - PHONE_NUMBER
+  - IBAN_CODE
+  - CREDIT_CARD
+  mask_strategy: replace
+retrieval:
+  bm25_b: 0.75
+  bm25_k1: 1.5
+  bm25_weight: 0.3
+  rerank_model: cohere
+  rerank_top_k: 10
+  score_threshold: 0.5
+  top_k: 4
+  use_hybrid: true
+  use_rerank: true
+  vector_weight: 0.7
+whisper:
+  model_size: base

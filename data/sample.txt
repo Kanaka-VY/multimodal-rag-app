@@ -1,0 +1,3 @@
+Multimodal RAG combines retrieval over text, images, and audio.
+Vector embeddings enable semantic search across different media types.
+This sample file can be indexed with: python scripts/migrate_data.py

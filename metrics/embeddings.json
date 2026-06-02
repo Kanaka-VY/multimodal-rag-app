@@ -1,0 +1,9 @@
+{
+  "text_vectors": 1420,
+  "image_vectors": 312,
+  "total_vectors": 1732,
+  "model_text": "sentence-transformers/all-MiniLM-L6-v2",
+  "model_clip": "sentence-transformers/clip-ViT-B-32",
+  "dimension": 384,
+  "timestamp": "2024-01-01T00:00:00Z"
+}

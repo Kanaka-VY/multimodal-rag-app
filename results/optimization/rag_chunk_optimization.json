@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "best_faithfulness": 0.0,
+  "best_params": {
+    "chunk_size": 512,
+    "chunk_overlap": 64,
+    "top_k": 4,
+    "score_threshold": 0.5
+  },
+  "n_trials": 50,
+  "study_name": "rag_chunk_optimization"
+}
